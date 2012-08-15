@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[INIT,SET,CHECKBOX,${1:element},TO,]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>ck</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.vgr</scope>
+</snippet>

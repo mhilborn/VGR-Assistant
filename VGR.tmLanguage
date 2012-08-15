@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>vgr</string>
+	</array>
+	<key>name</key>
+	<string>VGR</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>comment</key>
+			<string>
+				Developer: Matthew Hilborn
+				Date: 8/9/2012
+				Purpose: Syntax Highlighting for VGR code
+			</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>##(ISSUE::)</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>invalid.vgr</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Match: comments starting with ##ISSUE::</string>
+			<key>end</key>
+			<string>\n</string>
+			<key>name</key>
+			<string>comment.line.number-sign</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>#</string>
+			<key>comment</key>
+			<string>Match: comments starting with #</string>
+			<key>end</key>
+			<string>\n</string>
+			<key>name</key>
+			<string>comment.line.number-sign</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.vgr</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>string.quoted.single.vgr</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>string.quoted.single.vgr</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>name</key>
+					<string>variable.parameter.vgr</string>
+				</dict>
+				<key>5</key>
+				<dict>
+					<key>name</key>
+					<string>string.quoted.single.vgr</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>match: ^^^prompt=aValue `variable bValue</string>
+			<key>match</key>
+			<string>(\^{3})\w+=((\w*[ \./,\(\)@&amp;%-:]*)*)(`\w*)*((\w*[ \./,\(\)@&amp;%-:]*)*)</string>
+			<key>name</key>
+			<string>meta.class.vgr</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>support.constant.vgr</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>string.quoted.single.vgr</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>match: UNIT syntax</string>
+			<key>match</key>
+			<string>(.UNIT.)((\w*[ \./]*)*)</string>
+			<key>name</key>
+			<string>meta.class.vgr</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.vgr</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>string.quoted.single.vgr</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>match: @LOAD_ORDER=OIS=###### </string>
+			<key>match</key>
+			<string>(@LOAD_ORDER)=OIS=([0-9]*)</string>
+			<key>name</key>
+			<string>meta.class.vgr</string>
+		</dict>
+		<dict>
+			<key>comments</key>
+			<string>match: ???+ highlight as errors</string>
+			<key>match</key>
+			<string>\?{2,}</string>
+			<key>name</key>
+			<string>invalid.vgr</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.vgr</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>variable.parameter.vgr</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>name</key>
+					<string>string.quoted.single.vgr</string>
+				</dict>
+				<key>5</key>
+				<dict>
+					<key>name</key>
+					<string>variable.parameter.vgr</string>
+				</dict>
+				<key>6</key>
+				<dict>
+					<key>name</key>
+					<string>support.constant.vgr</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>match: PHASE,COMMAND,TYPE,OPERAND1,OPERATION,OPERAND2,CONNECTOR </string>
+			<key>match</key>
+			<string>[EDIT|INIT],(\w+),(\w+)*,?(\w+)*,?\w*,*("\w+"|[0-9]+_*\w*|"\.{3}"|ALL*|"[0-9]+\.*[0-9]*")*(`?[a-zA-Z]+\.*(\w+)*)*</string>
+			<key>name</key>
+			<string>meta.class.vgr</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>source.vgr</string>
+	<key>uuid</key>
+	<string>ad175ec3-ed6e-447f-9cb5-1d638f77b2ad</string>
+</dict>
+</plist>

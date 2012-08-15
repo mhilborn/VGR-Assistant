@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[EDIT,${1:COMMAND},${2:TYPE},${3:OPPERAND1},${4:OPPERATION},${5:OPPERAND2},${6:CONTINUE} ]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>edit</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.vgr</scope>
+</snippet>

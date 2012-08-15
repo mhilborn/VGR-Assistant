@@ -1,0 +1,65 @@
+<snippet>
+	<content><![CDATA[
+#######################################################
+# Developer: Matthew Hilborn
+# Date: DATE
+# Form: FORM NAME
+# Facility: PHAZ 00
+# Description: OUTLINE NAME
+# Maintenance History:
+#	
+# Copyright: Vanguard Health Systems, Copyright (2012)
+
+#########################################
+# BEGIN INIT PHASE RULES                # 
+#########################################
+
+################### LOCAL VARIABLES ###################
+INIT,SET,LOCAL,orderstring,TO
+
+################### BUTTONS ###################
+INIT,SET,HIDDEN,PlaceOrderButton,TO
+INIT,SET,HIDDEN,ExitButton,TO
+#INIT,SET,LOCAL,_print,TO,enabled
+#INIT,SET,LOCAL,_noclose,TO,disabled
+
+################### INIT ORDERS ###################
+INIT,SET,CHECKBOX,???,TO,???
+INIT,SET,SELECT,???,TO,???
+INIT,SET,TEXT,???,TO,???
+
+################### LOAD FORM ###################
+INIT,LOAD,FORM,,,00_formname
+
+
+#########################################
+# BEGIN EDIT PHASE RULES                # 
+#########################################
+
+################### EXIT BUTTON ###################
+EDIT,IF,,ExitButton,EQ,"Exit Without Ordering",THEN
+EDIT,EXIT,ALL
+
+################### EDIT ORDERS ###################
+##ORDER: order
+##ISSUE:: whatever the issue is
+EDIT,IF,,checkboxName,EQ,"checkboxValue",THEN
+EDIT,SET,LOCAL,orderstring,CAT,"@LOAD_ORDER=OIS=???^^^OOS=???"
+
+#CKBX: checkbox name
+##ORDER: order
+EDIT,IF,,checkboxName,EQ,"checkboxValue",THEN
+EDIT,SET,LOCAL,orderstring,CAT,"@LOAD_ORDER=OIS=???^^^OOS=???"
+
+################### TRACKING ORDER ###################
+EDIT,SET,LOCAL,orderstring,CAT,"@LOAD_ORDER=OIS=???^^^OOS=0"
+
+################### UPLOAD ORDERS ###################
+EDIT,LOAD_ORDER,,,,orderstring
+EDIT,EXIT,ALL
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>vgr-template</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>
